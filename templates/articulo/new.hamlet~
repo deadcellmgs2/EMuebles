@@ -1,0 +1,5 @@
+<h1> Crear Articulo 
+
+<form method=post action=@{NewArticuloR} entype=#{entype} >
+ ^{widget}
+ <button .btn .btn-info>Submit

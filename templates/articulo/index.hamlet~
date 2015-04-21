@@ -1,0 +1,10 @@
+<h1> Mis Articulos 
+
+<div .jumbotron> 
+  <ul> 
+    $forall Entity bid articulo <- articles 
+		<li> 
+		  <a> #{articuloNombre articulo}
+		  <a> #{articuloDescripcionCorta articulo} 
+		  <a> #{articuloPrecio articulo}
+		    

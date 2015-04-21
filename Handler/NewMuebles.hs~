@@ -1,0 +1,12 @@
+module Handler.NewMuebles where
+
+import Import
+
+
+
+
+getNewMueblesR :: Handler Html
+getNewMueblesR = error "Not yet implemented: getNewMueblesR"
+
+postNewMueblesR :: Handler Html
+postNewMueblesR = error "Not yet implemented: postNewMueblesR"

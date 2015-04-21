@@ -1,0 +1,21 @@
+Test suite test: RUNNING...
+Migrating: CREATe TABLE "user"("id" SERIAL PRIMARY KEY UNIQUE,"ident" VARCHAR NOT NULL,"password" VARCHAR NULL)
+Migrating: CREATe TABLE "email"("id" SERIAL PRIMARY KEY UNIQUE,"email" VARCHAR NOT NULL,"user" INT8 NULL,"verkey" VARCHAR NULL)
+Migrating: ALTER TABLE "user" ADD CONSTRAINT "unique_user" UNIQUE("ident")
+Migrating: ALTER TABLE "email" ADD CONSTRAINT "unique_email" UNIQUE("email")
+Migrating: ALTER TABLE "email" ADD CONSTRAINT "email_user_fkey" FOREIGN KEY("user") REFERENCES "user"("id")
+
+Handler.Common
+  robots.txt
+    gives a 200
+    has correct User-agent
+  favicon.ico
+    gives a 200
+Handler.Home
+  loads the index and checks it looks right
+  leaves the user table empty
+
+Finished in 0.5060 seconds
+5 examples, 0 failures
+Test suite test: PASS
+Test suite logged to: dist/test/EMuebles-0.0.0-test.log
